@@ -1,63 +1,25 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "electron-auto-update-example",
+  "version": "1.0.1",
+  "description": "",
   "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edsamo/electron-update.git"
+  },
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
     "build": "electron-builder build --win --publish never",
     "deploy": "electron-builder build --win --publish always"
   },
-  "repository": {
-    "type" : "git",
-    "url" : "https://github.com/edsamo/electron-update.git"
-  },
-  "build": {
-    "appId": "com.electron-updater",
-    "publish": [{
-      "owner": "edsamo",
-      "repo": "electron-update",
-      "provider": "github"
-    }
-    ],
-    "productName": "electron-update",
-    "copyright": "Copyright © 2020 electron-update}",
-    "win": {
-      "publish": [
-        "github"
-      ],
-      "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "x64",
-            "ia32"
-          ]
-        }
-      ]
-    },
-    "files": [
-      "./main.js",
-      "node_modules/**/*"
-    ],
-    "directories": {
-      "buildResources": "assets"
-    }
-  },
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "electron": "^8.2.5",
-    "electron-builder": "^22.6.0"
+    "electron": "^5.0.1",
+    "electron-builder": "^20.40.2"
   },
   "dependencies": {
-    "electron-updater": "^4.3.1"
+    "electron-updater": "^4.0.6"
   }
 }

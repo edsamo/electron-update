@@ -30,7 +30,6 @@ app.on('window-all-closed', function () {
   }
 });
 
-
 app.on('activate', function () {
   if (mainWindow === null) {
     createWindow();
@@ -52,6 +51,3 @@ autoUpdater.on('update-downloaded', () => {
 ipcMain.on('restart_app', () => {
   autoUpdater.quitAndInstall();
 });
-
-process.env.GH_TOKEN = "709f2b4f4d75350706839f88a29a46cb14b948fb";
-
