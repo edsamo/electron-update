@@ -1,6 +1,6 @@
 {
   "name": "electron-auto-update-example",
-  "version": "1.0.1",
+  "version": "2.0.1",
   "description": "",
   "main": "main.js",
   "repository": {
@@ -11,10 +11,21 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
     "build": "electron-builder build --win --publish never",
-    "deploy": "electron-builder build --win --publish always"
+    "deploy": "build --win -p always"
   },
-  "author": "",
+  "author": "Teste",
   "license": "ISC",
+  "build": {
+    "appId": "com.teste",
+    "productName": "Electron Auto Update",
+    "publish": [
+      {
+        "owner": "edsamo",
+        "repo": "electron-update",
+        "provider": "github"
+      }
+    ]
+  },
   "devDependencies": {
     "electron": "^5.0.1",
     "electron-builder": "^20.40.2"
