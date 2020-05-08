@@ -12,6 +12,38 @@
     "type" : "git",
     "url" : "https://github.com/edsamo/electron-update.git"
   },
+  "build": {
+    "appId": "com.electron-updater",
+    "publish": [{
+      "owner": "edsamo",
+      "repo": "electron-update",
+      "provider": "github"
+    }
+    ],
+    "productName": "electron-update",
+    "copyright": "Copyright © 2020 electron-update}",
+    "win": {
+      "publish": [
+        "github"
+      ],
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "files": [
+      "./main.js",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
   "keywords": [
     "Electron",
     "quick",
